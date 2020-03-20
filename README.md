@@ -9,11 +9,19 @@
 
 ## Sistema de Gestion Veterinaria
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este software veterinario le permite mantener el historial clínico de la mascota, en cada ficha médica puede ingresar el más completo detalle de la consulta como constantes fisiológicas, enfermedades previas, exámenes solicitados, medicamentos, vacunas, antiparasitarios, la receta médica y más.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+Gestión veterinaria Le permite fidelizar clientes ya que mantiene todo su historial, preferencias de productos y alimentos, mascotas y datos de contacto en tiempo real.
+
+Gestión Veterinaria permite enviar notificaciones de vacunas y controles agendados a los clientes de modo de mantenerlos informados de cuando deben llevar a su mascota a vacunarse o a control.
+
+Para empezar a trabajar con nosotros solo requiere de un computador con conexión a Internet.
+
+El Sistema de Gestión Veterinaria está orientado principalmente al apoyo, gestión, administración y control de las clínicas veterinarias:
+
+- [Ficha médica].
+- [Historial Medico].
+- [Reserva de citas médica].
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
