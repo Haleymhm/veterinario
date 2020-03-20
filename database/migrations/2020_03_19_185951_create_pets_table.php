@@ -22,8 +22,11 @@ class CreatePetsTable extends Migration
             $table->string('kind',150)->comment('Tipo de Mascota');
             $table->integer('idbreed')->comment('Raza de la Mascota');
             $table->integer('gender')->comment('Genero de la Mascota');
-            $table->string('color',150)->comment('my comment');
-
+            $table->string('color',150)->comment('Rasgos de la Piel/Pelaje');
+            $table->string('holding',150)->comment('Para que ocupa la mascota');
+            $table->string('procurement',150)->comment('Como Obtuvo la mascota');
+            $table->string('microchip',150);
+            
 
             $table->timestamps();
             $table->softDeletes();
