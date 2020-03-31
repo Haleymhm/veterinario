@@ -15,7 +15,8 @@ class CreateOwnersTable extends Migration
     {
         Schema::create('owners', function (Blueprint $table) {
             $table->id();
-            $table->char('uid',36);
+            $table->char('veterinary_uid',36)->index();
+            $table->char('uid',36)->unique()->index();
             $table->char('rut',10);
             $table->string('nameowner',150);
             $table->string('mobile',12);

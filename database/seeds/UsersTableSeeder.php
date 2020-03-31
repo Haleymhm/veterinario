@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Ramsey\Uuid\Uuid;
 //use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
@@ -15,9 +16,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'uid' =>Uuid::uuid4(),
             'name' => 'Administrador',
-            'email' => 'admin@localhost.dev',
-            'tipousuario_id' => '1',
+            'email' => 'admin@veterinario.test',
+            'tipousuario_id' => '0',
             'password' => Hash::make('Admin123'),
         ]);
     }

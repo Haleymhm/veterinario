@@ -18,7 +18,7 @@
   --white: #fff;
   --gray: #757575;
   --gray-dark: #5a5c69;
-  --primary: #6777EF;
+  --primary: #154360;
   --secondary: #757575;
   --success: #66bb6a;
   --info: #3abaf4;
@@ -175,7 +175,7 @@ a {
 }
 
 a:hover {
-  color: #224abe;
+  color: #154360;
   text-decoration: underline;
 }
 
@@ -11479,7 +11479,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #6777EF !important;
+  color: #4682b4 !important;
 }
 
 a.text-primary:hover,
