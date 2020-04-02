@@ -1,0 +1,13 @@
+POR VETERIANARIA
+
+Veterinaraia
+    Formulario para editar los datos basicos de la Veterinaraia, asi como algonos datos renumen de los pacientes
+
+Usuarios
+    Mantenedor de usuarios de la Veterinaraia. se encargara de crear, editar y desactivar de esa Veterinaraia
+
+Mascotas
+    Mantenedor de Mascotas de la Veterinaraia. se encargara de crear, editar y desactivar de esa Veterinaraia
+
+Propietarios
+    Mantenedor de Propietarios Mascotas de la Veterinaraia. se encargara de crear, editar y desactivar de esa Veterinaraia

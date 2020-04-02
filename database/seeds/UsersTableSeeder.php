@@ -17,9 +17,17 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'uid' =>Uuid::uuid4(),
+            'name' => 'Root de Sistema',
+            'email' => 'root@localhost.test',
+            'tipousuario_id' => '0',
+            'password' => Hash::make('root123'),
+        ]);
+
+        DB::table('users')->insert([
+            'uid' =>Uuid::uuid4(),
             'name' => 'Administrador',
             'email' => 'admin@veterinario.test',
-            'tipousuario_id' => '0',
+            'tipousuario_id' => '1',
             'password' => Hash::make('Admin123'),
         ]);
     }

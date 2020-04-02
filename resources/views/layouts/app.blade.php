@@ -8,105 +8,18 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="{{ asset('img/logo/logo.png') }}" rel="icon">
-  <title>RuangAdmin - Dashboard</title>
+  <title>{{ config('app.name', 'Laravel') }}</title>
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('css/ruang-admin.css') }}" rel="stylesheet">
+
+  @yield('componentCSS')
 </head>
 
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
-          <img src="img/logo/logo2.png">
-        </div>
-        <div class="sidebar-brand-text mx-3">RuangAdmin</div>
-      </a>
-      <hr class="sidebar-divider my-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        Features
-      </div>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
-          aria-expanded="true" aria-controls="collapseBootstrap">
-          <i class="far fa-fw fa-window-maximize"></i>
-          <span>Bootstrap UI</span>
-        </a>
-        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bootstrap UI</h6>
-            <a class="collapse-item" href="alerts.html">Alerts</a>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="dropdowns.html">Dropdowns</a>
-            <a class="collapse-item" href="modals.html">Modals</a>
-            <a class="collapse-item" href="popovers.html">Popovers</a>
-            <a class="collapse-item" href="progress-bar.html">Progress Bars</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="forms.html">
-          <i class="fab fa-fw fa-wpforms"></i>
-          <span>Forms</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
-          aria-controls="collapseTable">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span>
-        </a>
-        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Tables</h6>
-            <a class="collapse-item" href="simple-tables.html">Simple Tables</a>
-            <a class="collapse-item" href="datatables.html">DataTables</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="ui-colors.html">
-          <i class="fas fa-fw fa-palette"></i>
-          <span>UI Colors</span>
-        </a>
-      </li>
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        Examples
-      </div>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
-          aria-controls="collapsePage">
-          <i class="fas fa-fw fa-columns"></i>
-          <span>Pages</span>
-        </a>
-        <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Example Pages</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span>
-        </a>
-      </li>
-      <hr class="sidebar-divider">
-      <div class="version" id="version-ruangadmin"></div>
-    </ul>
+    @include('partials.menu')
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -175,98 +88,11 @@
 
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
-          <!-- <div class="d-sm-flex align-items-center justify-content-between mb-1">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-            </ol>
-          </div> -->
- 
-          <div class="row mb-1">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Earnings (Monthly)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                        <span>Since last month</span>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-primary"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Earnings (Annual) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Sales</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">650</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                        <span>Since last years</span>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-shopping-cart fa-2x text-success"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- New User Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">New User</div>
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 20.4%</span>
-                        <span>Since last month</span>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-users fa-2x text-info"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Pending Requests</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                        <span>Since yesterday</span>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            
-          </div>
+          <!-- partials.breadcrumb -->
+          <!-- partials.cards' -->
+          
+          @yield('content')
           <!--Row-->
 
         </div>
@@ -277,7 +103,7 @@
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>copyright &copy; 2020 - developed by
-              <b><a href="https://h2sistemas.com" target="_blank">Haleym Hidalgo Motetones</a></b>
+              <b><a href="http://haleymhm.webcindario.com" target="_blank">Haleym Hidalgo Motetones</a></b>
             </span>
           </div>
         </div>
@@ -295,8 +121,9 @@
   <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('js/ruang-admin.min.js') }}"></script>
-  <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
-  <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>  
+
+  @yield('componentJS')
+
 </body>
 
 </html>

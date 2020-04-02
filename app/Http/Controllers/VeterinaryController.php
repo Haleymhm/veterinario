@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Veterinary;
 use Illuminate\Http\Request;
 
+use Session;
+
 class VeterinaryController extends Controller
 {
     /**
@@ -12,9 +14,16 @@ class VeterinaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
+        $veterinaries=Veterinary::all();
+        return view('backoffice.veterinary.index',compact('veterinaries'));
     }
 
     /**
@@ -24,7 +33,7 @@ class VeterinaryController extends Controller
      */
     public function create()
     {
-        
+        return view('backoffice.veterinary.create');
     }
 
     /**

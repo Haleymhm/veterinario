@@ -27,9 +27,7 @@ class CreatePetsTable extends Migration
             $table->string('holding',150)->comment('Para que ocupa la mascota');
             $table->string('procurement',150)->comment('Como Obtuvo la mascota');
             $table->string('microchip',150);
-            /*
-            
-            
+            /*           
             
             */
 
