@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class AppointmentType extends Model
 {
-    //
+    use SoftDeletes;
 }

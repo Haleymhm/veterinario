@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Owner extends Model
 {
-    //
+    use SoftDeletes;
 }

@@ -14,11 +14,12 @@ class CreateRacesTable extends Migration
     public function up()
     {
         Schema::create('races', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->char('uid',36)->unique()->index();
             $table->string('name', 100);
             $table->integer('kinds_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

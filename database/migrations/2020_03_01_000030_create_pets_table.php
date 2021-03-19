@@ -14,7 +14,7 @@ class CreatePetsTable extends Migration
     public function up()
     {
         Schema::create('pets', function (Blueprint $table) {
-            $table->id();   
+            $table->bigIncrements('id');  
             $table->char('veterinary_uid',36)->index();
             $table->char('uid',36)->unique()->index();
             $table->char('rutowner',10)->comment('Propietario de la Mascota');
@@ -27,11 +27,10 @@ class CreatePetsTable extends Migration
             $table->string('holding',150)->comment('Para que ocupa la mascota');
             $table->string('procurement',150)->comment('Como Obtuvo la mascota');
             $table->string('microchip',150);
-            /*           
-            
-            */
-
+ 
             $table->timestamps();
+
+            $table->foreign('veterinary_uid')->references('uid')->on('veterinaries');
         });
     }
 

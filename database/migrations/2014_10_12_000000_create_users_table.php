@@ -14,9 +14,9 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->char('uid',36)->unique()->index();
-            $table->char('veterinary_uid',36)->index()->nullable();
+            $table->char('veterinary_uid',36)->index();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -24,6 +24,9 @@ class CreateUsersTable extends Migration
             $table->integer('tipousuario_id');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
+            
+            $table->foreign('veterinary_uid')->references('uid')->on('veterinaries');
         });
     }
 

@@ -18,6 +18,7 @@ class CreateKindsTable extends Migration
             $table->char('uid',36)->unique()->index();
             $table->string('name', 100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kind extends Model
 {
-    //
+    use SoftDeletes;
 }

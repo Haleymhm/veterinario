@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Veterinary extends Model
 {
+    use SoftDeletes;
     protected $table = 'veterinaries';
+    
     protected $fillable = [
         'id',
         'uid',

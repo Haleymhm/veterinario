@@ -15,7 +15,7 @@ class VeterinarySeeder extends Seeder
     public function run()
     {
         DB::table('veterinaries')->insert([
-            'uid' =>Uuid::uuid4(),
+            'uid' =>'0',
             'name' => 'Clinica Veterinaria',
             'address' => 'Direcion del local',
             'telephone' => '',

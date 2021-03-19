@@ -14,13 +14,15 @@ class CreateAppointmentsTable extends Migration
     public function up()
     {
         Schema::create('appointments', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->char('uid',36)->unique()->index();
             $table->char('veterinary_uid',36)->index();
             $table->dateTime('date_appointment');
             $table->integer('appointment_type_id');
             $table->char('rutowner',10);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('veterinary_uid')->references('uid')->on('veterinaries');
         });
     }
 

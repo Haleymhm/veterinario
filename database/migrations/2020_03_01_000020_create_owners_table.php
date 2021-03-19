@@ -14,21 +14,21 @@ class CreateOwnersTable extends Migration
     public function up()
     {
         Schema::create('owners', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->char('veterinary_uid',36)->index();
             $table->char('uid',36)->unique()->index();
             $table->char('rut',10);
             $table->string('nameowner',150);
             $table->string('mobile',12);
-            $table->string('phone',12);
+            $table->string('phone',12)->nullable();
             $table->string('email',120);
-            $table->string('address',250);
             $table->integer('idcomuna');
             $table->integer('idregion');
-            
+            $table->string('address',250);
 
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('veterinary_uid')->references('uid')->on('veterinaries');
         });
     }
 
