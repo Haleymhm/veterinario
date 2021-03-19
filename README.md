@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/laravel/art/blob/master/logo-mark/5%20svg/3%20rgb/1%20Full%20Color/laravel-mark-rgb-red.svg" width="200"></p>
+<p align="left"><img src="https://github.com/laravel/art/blob/master/logo-mark/5%20svg/3%20rgb/1%20Full%20Color/laravel-mark-rgb-red.svg" width="200"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -22,10 +22,6 @@ El Sistema de Gestión Veterinaria está orientado principalmente al apoyo, gest
 - [Ficha médica].
 - [Historial Medico].
 - [Reserva de citas médica].
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
