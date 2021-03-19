@@ -19,7 +19,11 @@
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
-    @include('partials.menu')
+    @if (Auth::user()->tipousuario_id == 0)
+      @include('partials.menuroot')
+    @elseif (Auth::user()->tipousuario_id == 1)
+      @include('partials.menuadmin')
+    @endif
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -100,8 +104,8 @@
       </div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
+        <div class="container ">
+          <div class="copyright text-center">
             <span>copyright &copy; 2020 - developed by
               <b><a href="http://haleymhm.webcindario.com" target="_blank">Haleym Hidalgo Motetones</a></b>
             </span>

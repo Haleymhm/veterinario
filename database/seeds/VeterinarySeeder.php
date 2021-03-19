@@ -16,7 +16,7 @@ class VeterinarySeeder extends Seeder
     {
         DB::table('veterinaries')->insert([
             'uid' =>'0',
-            'name' => 'Clinica Veterinaria',
+            'name' => 'Mantenedor del Sistema',
             'address' => 'Direcion del local',
             'telephone' => '',
             'movil' => '',

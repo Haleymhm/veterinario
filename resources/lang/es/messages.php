@@ -1,0 +1,23 @@
+<?php
+return [
+    "namesystem" => "Sistema de Gestión Veterinária",
+    "add_category" => "Agregar categoría",
+    "categories" => "Categorías",
+    "name" => "Nombre",
+    "description" => "Descripción",
+    "category_created" => "Categoría creada",
+    "save" => "Guardar",
+    "go_back" => "Volver",
+    "edit" => "Editar",
+    "delete" => "Eliminar",
+    "edit_category" => "Editar categoría",
+    "confirm_action" => "Por favor, confirme",
+    "category_updated" => "Categoría actualizada",
+    "category_deleted" => "Categoría eliminada",
+    "products" => "Productos",
+    "add_product" => "Agregar producto",
+    "price" => "Precio",
+    "stock" => "Stock",
+    "category" => "Categoria",
+    "product_created" => "Product creado con exito!",
+];
