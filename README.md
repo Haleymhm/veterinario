@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/laravel/art/blob/master/logo-mark/4%20PNG/3%20RGB/1%20Full%20Color/laravel-mark-rgb-red.png" width="400"></p>
+<p align="center"><img src="https://github.com/laravel/art/blob/master/logo-mark/5%20svg/3%20rgb/1%20Full%20Color/laravel-mark-rgb-red.svg" width="200"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
